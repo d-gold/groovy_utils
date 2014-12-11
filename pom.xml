@@ -15,7 +15,9 @@
     <properties>
         <groovy.version>2.3.8</groovy.version>
         <junit.version>3.8.2</junit.version>
-
+        <jdk.version>1.8</jdk.version>
+        <gmaven.version>1.5</gmaven.version>
+        <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -26,6 +28,7 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
@@ -38,7 +41,7 @@
             <plugin>
                 <groupId>org.codehaus.gmaven</groupId>
                 <artifactId>gmaven-plugin</artifactId>
-                <version>1.5</version>
+                <version>${gmaven.version}</version>
                 <configuration>
                     <providerSelection>1.8</providerSelection>
                 </configuration>
@@ -53,15 +56,16 @@
                     </execution>
                 </executions>
             </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
