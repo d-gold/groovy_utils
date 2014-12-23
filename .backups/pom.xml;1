@@ -15,8 +15,7 @@
     <properties>
         <groovy.version>2.3.8</groovy.version>
         <junit.version>3.8.2</junit.version>
-        <!-- <jdk.version>1.8</jdk.version> -->
-        <jdk.version>1.7</jdk.version>
+        <jdk.version>1.8</jdk.version>
         <gmaven.version>1.5</gmaven.version>
         <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
